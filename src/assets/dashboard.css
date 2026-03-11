@@ -1,17 +1,17 @@
 :root {
-    color-scheme: dark;
-    --bg: #071122;
-    --bg-soft: #0d1830;
-    --panel: rgba(14, 24, 48, 0.92);
-    --panel-strong: #101c38;
-    --line: rgba(104, 130, 191, 0.18);
-    --text: #eef4ff;
-    --muted: #8ea3c7;
-    --brand: #17d6a3;
-    --brand-2: #5ea0ff;
-    --pink: #ff4db8;
-    --amber: #f59e0b;
-    --shadow: 0 24px 70px rgba(0, 0, 0, 0.38);
+    color-scheme: light;
+    --bg: #f4f8ff;
+    --bg-soft: #eef4ff;
+    --panel: rgba(255, 255, 255, 0.94);
+    --panel-strong: #ffffff;
+    --line: rgba(105, 132, 190, 0.18);
+    --text: #14233d;
+    --muted: #6c7f9f;
+    --brand: #11bfa0;
+    --brand-2: #4c8dff;
+    --pink: #f048a6;
+    --amber: #e8a11d;
+    --shadow: 0 24px 64px rgba(36, 76, 152, 0.12);
     font-family: 'SUIT Variable', 'Pretendard Variable', 'Apple SD Gothic Neo', 'Noto Sans KR', sans-serif;
 }
 
@@ -22,9 +22,9 @@
 body {
     margin: 0;
     background:
-        radial-gradient(circle at top left, rgba(94, 160, 255, 0.15), transparent 28%),
-        radial-gradient(circle at top right, rgba(23, 214, 163, 0.12), transparent 22%),
-        linear-gradient(180deg, #060d1c 0%, #081327 56%, #09152b 100%);
+        radial-gradient(circle at top left, rgba(76, 141, 255, 0.16), transparent 26%),
+        radial-gradient(circle at top right, rgba(17, 191, 160, 0.12), transparent 22%),
+        linear-gradient(180deg, #fbfdff 0%, #f4f8ff 58%, #edf3fb 100%);
     color: var(--text);
 }
 
@@ -45,20 +45,20 @@ input {
     height: 420px;
     border-radius: 999px;
     filter: blur(80px);
-    opacity: 0.34;
+    opacity: 0.45;
     pointer-events: none;
 }
 
 .survey-background-glow-left {
     top: -140px;
     left: -60px;
-    background: rgba(94, 160, 255, 0.32);
+    background: rgba(76, 141, 255, 0.2);
 }
 
 .survey-background-glow-right {
     top: 80px;
     right: -80px;
-    background: rgba(23, 214, 163, 0.22);
+    background: rgba(17, 191, 160, 0.16);
 }
 
 .login-shell {
@@ -75,8 +75,8 @@ input {
 }
 
 .login-hero-card {
-    background: rgba(10, 20, 40, 0.92);
-    border: 1px solid rgba(104, 130, 191, 0.18);
+    background: rgba(255, 255, 255, 0.92);
+    border: 1px solid rgba(105, 132, 190, 0.16);
     box-shadow: var(--shadow);
     border-radius: 34px;
     padding: 34px 24px;
@@ -99,8 +99,8 @@ input {
 
 .hero-badge,
 .panel-kicker {
-    background: rgba(94, 160, 255, 0.14);
-    color: #9bc0ff;
+    background: rgba(76, 141, 255, 0.1);
+    color: #3978ec;
 }
 
 .login-hero-card h1 {
@@ -117,7 +117,7 @@ input {
 }
 
 .panel-card {
-    background: rgba(18, 28, 52, 0.95);
+    background: rgba(255, 255, 255, 0.96);
     border: 1px solid var(--line);
     box-shadow: var(--shadow);
     border-radius: 28px;
@@ -152,7 +152,7 @@ input {
     padding: 18px 20px;
     border-radius: 20px;
     border: 1px solid var(--line);
-    background: rgba(6, 14, 28, 0.86);
+    background: #f8fbff;
     color: var(--text);
     font-size: 1.2rem;
     font-weight: 800;
@@ -161,8 +161,8 @@ input {
 }
 
 .single-input:focus {
-    outline: 2px solid rgba(23, 214, 163, 0.18);
-    border-color: rgba(23, 214, 163, 0.5);
+    outline: 2px solid rgba(17, 191, 160, 0.16);
+    border-color: rgba(17, 191, 160, 0.45);
 }
 
 .primary-button,
@@ -182,22 +182,22 @@ input {
 .primary-button {
     padding: 14px 18px;
     border-radius: 18px;
-    background: linear-gradient(135deg, var(--brand), #12b2c1);
-    color: #03131b;
+    background: linear-gradient(135deg, var(--brand), #37d1bb);
+    color: white;
     font-weight: 900;
 }
 
 .ghost-button {
     padding: 14px 18px;
     border-radius: 18px;
-    background: rgba(255, 255, 255, 0.04);
-    color: var(--muted);
+    background: rgba(76, 141, 255, 0.06);
+    color: #44628f;
     border: 1px solid var(--line);
     font-weight: 700;
 }
 
 .ghost-button.light {
-    color: #d7e5ff;
+    color: #33527d;
 }
 
 .full-width {
@@ -206,7 +206,7 @@ input {
 
 .error-text {
     margin: 10px 0 0;
-    color: #ff8cae;
+    color: #db4777;
     font-size: 0.92rem;
     font-weight: 600;
 }
@@ -286,8 +286,8 @@ input {
 
 .sidebar-title {
     margin-bottom: 12px;
-    background: rgba(255, 255, 255, 0.04);
-    color: #c8d8f7;
+    background: rgba(76, 141, 255, 0.08);
+    color: #4d79b8;
 }
 
 .sidebar-list {
@@ -308,8 +308,8 @@ input {
     width: 100%;
     padding: 14px 16px;
     border-radius: 16px;
-    background: rgba(255, 255, 255, 0.03);
-    color: #dbe7fd;
+    background: rgba(76, 141, 255, 0.04);
+    color: var(--text);
     text-align: left;
 }
 
@@ -324,13 +324,13 @@ input {
 }
 
 .sidebar-item.is-active {
-    background: linear-gradient(135deg, rgba(23, 214, 163, 0.16), rgba(94, 160, 255, 0.12));
-    border: 1px solid rgba(23, 214, 163, 0.24);
+    background: linear-gradient(135deg, rgba(17, 191, 160, 0.14), rgba(76, 141, 255, 0.1));
+    border: 1px solid rgba(17, 191, 160, 0.2);
 }
 
 .sidebar-item.is-accent {
-    background: rgba(94, 160, 255, 0.14);
-    border: 1px solid rgba(94, 160, 255, 0.2);
+    background: rgba(76, 141, 255, 0.12);
+    border: 1px solid rgba(76, 141, 255, 0.18);
 }
 
 .dashboard-main {
@@ -347,13 +347,13 @@ input {
     padding: 26px;
     border-radius: 24px;
     background:
-        linear-gradient(135deg, rgba(23, 214, 163, 0.12), rgba(94, 160, 255, 0.08)),
+        linear-gradient(135deg, rgba(17, 191, 160, 0.08), rgba(76, 141, 255, 0.05)),
         var(--panel);
 }
 
 .hero-chip {
-    background: rgba(23, 214, 163, 0.14);
-    color: #7ff0d2;
+    background: rgba(17, 191, 160, 0.12);
+    color: #0d9f85;
 }
 
 .dashboard-hero h2 {
@@ -392,16 +392,16 @@ input {
 
 .dark-metric-card p {
     margin: 0;
-    color: #6fd8bf;
+    color: #0ea88f;
     font-size: 0.88rem;
 }
 
 .metric-up {
-    color: #6ff3c6;
+    color: #0aa77b;
 }
 
 .metric-down {
-    color: #ff8cae;
+    color: #db4777;
 }
 
 .chart-panel,
@@ -438,8 +438,8 @@ input {
 .panel-tags span {
     padding: 9px 12px;
     border-radius: 14px;
-    background: rgba(255, 255, 255, 0.04);
-    color: #bfd0ef;
+    background: rgba(76, 141, 255, 0.06);
+    color: #4d79b8;
     font-size: 0.82rem;
     font-weight: 700;
 }
@@ -476,7 +476,7 @@ input {
     width: 42px;
     height: 42px;
     border-radius: 14px;
-    background: rgba(94, 160, 255, 0.12);
+    background: rgba(76, 141, 255, 0.1);
     margin-bottom: 12px;
 }
 
@@ -506,18 +506,18 @@ input {
 }
 
 .competency-values span {
-    background: rgba(94, 160, 255, 0.14);
-    color: #9fc2ff;
+    background: rgba(76, 141, 255, 0.12);
+    color: #3d72d7;
 }
 
 .competency-values em {
-    color: #6d83ab;
+    color: #7c8daa;
     font-style: normal;
     font-weight: 700;
 }
 
 .competency-values b {
-    background: rgba(23, 214, 163, 0.12);
+    background: rgba(17, 191, 160, 0.1);
 }
 
 .insight-summary {
@@ -532,8 +532,8 @@ input {
 .insight-item {
     padding: 14px 15px;
     border-radius: 16px;
-    background: rgba(255, 255, 255, 0.03);
-    color: #d8e4fa;
+    background: rgba(76, 141, 255, 0.04);
+    color: #294066;
     line-height: 1.65;
 }
 
