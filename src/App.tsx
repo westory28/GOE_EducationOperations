@@ -203,30 +203,6 @@ const App: React.FC = () => {
                             </article>
                         </section>
 
-                        <section className="roadmap-card">
-                            <div className="card-header">
-                                <div>
-                                    <span className="section-kicker">운영 흐름</span>
-                                    <h2>연구사 협의 방향을 반영한 결과 확인 순서</h2>
-                                </div>
-                            </div>
-
-                            <div className="roadmap-grid">
-                                <div className="roadmap-step">
-                                    <strong>1. 최소 정보 접속</strong>
-                                    <p>이름이나 이메일 없이 고유번호 4자리만으로 본인 결과에 접근합니다.</p>
-                                </div>
-                                <div className="roadmap-step">
-                                    <strong>2. 사전·사후 비교</strong>
-                                    <p>개인 변화와 연수생 전체 평균을 같은 화면에서 직관적으로 확인합니다.</p>
-                                </div>
-                                <div className="roadmap-step">
-                                    <strong>3. 정적 피드백 제공</strong>
-                                    <p>비용이 들지 않는 규칙 기반 문구로 바로 실행 가능한 다음 실천을 제안합니다.</p>
-                                </div>
-                            </div>
-                        </section>
-
                         <section className="download-card">
                             <div>
                                 <span className="section-kicker">결과지 저장</span>
