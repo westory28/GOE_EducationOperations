@@ -66,6 +66,42 @@ input {
     padding: 28px 18px 64px;
 }
 
+.login-shell {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.login-page {
+    position: relative;
+    width: 100%;
+    max-width: 560px;
+    padding: 24px 16px;
+}
+
+.login-hero-card {
+    background: var(--card);
+    backdrop-filter: blur(16px);
+    border: 1px solid rgba(255, 255, 255, 0.65);
+    box-shadow: var(--shadow);
+    border-radius: 36px;
+    padding: 32px 24px;
+    text-align: center;
+}
+
+.login-hero-card h1 {
+    margin: 12px 0 10px;
+    font-size: clamp(2rem, 6vw, 2.8rem);
+    line-height: 1.1;
+}
+
+.login-hero-card > p {
+    margin: 0 auto 24px;
+    max-width: 420px;
+    color: var(--muted);
+    line-height: 1.7;
+}
+
 .hero-card,
 .panel-card,
 .metric-card,
@@ -419,6 +455,12 @@ input {
     align-items: center;
     justify-content: space-between;
     gap: 18px;
+}
+
+.download-actions {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
 }
 
 .empty-state-card {

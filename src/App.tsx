@@ -1,17 +1,15 @@
 import React, { useMemo, useState } from 'react';
 import './assets/dashboard.css';
 import type { DashboardDataset, ParticipantRecord } from './features/survey-dashboard/types';
-import { getAdviceForParticipant, loadDatasetFromWorkbook, loadMockDataset } from './features/survey-dashboard/services/traineeData';
+import { getAdviceForParticipant, loadMockDataset } from './features/survey-dashboard/services/traineeData';
 import { downloadParticipantReport } from './features/survey-dashboard/services/reportExport';
 import { LoginPanel } from './features/survey-dashboard/components/LoginPanel';
-import { UploadPanel } from './features/survey-dashboard/components/UploadPanel';
 import { ScoreComparisonChart } from './features/survey-dashboard/components/ScoreComparisonChart';
 
 const App: React.FC = () => {
     const [dataset, setDataset] = useState<DashboardDataset>(loadMockDataset());
     const [inputId, setInputId] = useState('');
     const [loggedInId, setLoggedInId] = useState<string | null>(null);
-    const [uploading, setUploading] = useState(false);
     const [errorMessage, setErrorMessage] = useState('');
 
     const participant = useMemo<ParticipantRecord | null>(() => {
@@ -39,27 +37,46 @@ const App: React.FC = () => {
         setErrorMessage('');
     };
 
-    const handleWorkbookUpload = async (file: File) => {
-        setUploading(true);
-        setErrorMessage('');
-
-        try {
-            const nextDataset = await loadDatasetFromWorkbook(file);
-            setDataset(nextDataset);
-            setLoggedInId(null);
-            setInputId('');
-        } catch (error) {
-            const message = error instanceof Error ? error.message : '엑셀을 분석하지 못했습니다.';
-            setErrorMessage(message);
-        } finally {
-            setUploading(false);
-        }
-    };
-
     const handleDownload = () => {
         if (!participant) return;
         downloadParticipantReport(participant, dataset.summary);
     };
+
+    const handleBackToLogin = () => {
+        setLoggedInId(null);
+        setInputId('');
+        setErrorMessage('');
+        setDataset(loadMockDataset());
+    };
+
+    if (!participant) {
+        return (
+            <div className="survey-app-shell login-shell">
+                <div className="survey-background-glow survey-background-glow-left" />
+                <div className="survey-background-glow survey-background-glow-right" />
+
+                <main className="login-page">
+                    <section className="login-hero-card">
+                        <span className="hero-badge">GOE Education Operations</span>
+                        <h1>교원 연수 결과 확인</h1>
+                        <p>
+                            고유번호 4자리를 입력하면 더미 데이터 기반 개인 분석 화면으로 이동합니다.
+                            현재는 테스트 모드이며 `0001`, `0002`, `0003`으로 바로 확인할 수 있습니다.
+                        </p>
+
+                        <LoginPanel
+                            inputId={inputId}
+                            errorMessage={errorMessage}
+                            datasetLabel="더미 데이터 테스트 모드"
+                            participantCount={dataset.participants.length}
+                            onChangeInput={setInputId}
+                            onLogin={handleLogin}
+                        />
+                    </section>
+                </main>
+            </div>
+        );
+    }
 
     return (
         <div className="survey-app-shell">
@@ -72,7 +89,7 @@ const App: React.FC = () => {
                         <span className="hero-badge">GOE Education Operations</span>
                         <h1>교원 연수 설문 결과 분석 대시보드</h1>
                         <p>
-                            구글 로그인 없이 고유번호 4자리로 접속하고, 업로드한 엑셀 데이터를 바탕으로 사전·사후 변화와
+                            구글 로그인 없이 고유번호 4자리로 접속하고, 더미 데이터를 바탕으로 사전·사후 변화와
                             연수생 전체 평균을 한 번에 비교합니다.
                         </p>
                     </div>
@@ -80,35 +97,11 @@ const App: React.FC = () => {
                     <div className="hero-side">
                         <div className="hero-pill">모바일 우선</div>
                         <div className="hero-pill">AI 호출 없음</div>
-                        <div className="hero-pill">엑셀 업로드/다운로드</div>
+                        <div className="hero-pill">더미 데이터 테스트</div>
                     </div>
                 </section>
 
-                <section className="top-grid">
-                    <UploadPanel
-                        dataset={dataset}
-                        uploading={uploading}
-                        onResetMock={() => {
-                            setDataset(loadMockDataset());
-                            setLoggedInId(null);
-                            setInputId('');
-                            setErrorMessage('');
-                        }}
-                        onUpload={handleWorkbookUpload}
-                    />
-
-                    <LoginPanel
-                        inputId={inputId}
-                        errorMessage={errorMessage}
-                        datasetLabel={dataset.sourceLabel}
-                        participantCount={dataset.participants.length}
-                        onChangeInput={setInputId}
-                        onLogin={handleLogin}
-                    />
-                </section>
-
-                {participant ? (
-                    <>
+                <>
                         <section className="summary-grid">
                             <article className="metric-card">
                                 <span className="metric-label">사전 평균</span>
@@ -241,21 +234,16 @@ const App: React.FC = () => {
                                 <p>현재 화면의 핵심 수치와 세부 역량 변화를 `.xlsx` 파일로 내려받을 수 있습니다.</p>
                             </div>
 
-                            <button type="button" className="primary-button" onClick={handleDownload}>
-                                결과지 다운로드
-                            </button>
+                            <div className="download-actions">
+                                <button type="button" className="ghost-button" onClick={handleBackToLogin}>
+                                    로그인 화면으로
+                                </button>
+                                <button type="button" className="primary-button" onClick={handleDownload}>
+                                    결과지 다운로드
+                                </button>
+                            </div>
                         </section>
-                    </>
-                ) : (
-                    <section className="empty-state-card">
-                        <span className="section-kicker">시작 안내</span>
-                        <h2>엑셀을 올리고 고유번호 4자리를 입력하면 개인 분석 화면이 열립니다.</h2>
-                        <p>
-                            현재는 더미 데이터가 기본으로 들어 있습니다. 실제 파일은 사전/사후 시트의 `전체 평균`,
-                            `학교명`, `이름`, `전화번호` 또는 `고유번호` 열을 우선 읽도록 만들어 두었습니다.
-                        </p>
-                    </section>
-                )}
+                </>
             </main>
         </div>
     );
