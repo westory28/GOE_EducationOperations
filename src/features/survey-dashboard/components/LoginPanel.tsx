@@ -36,7 +36,7 @@ export const LoginPanel: React.FC<LoginPanelProps> = ({
                 className="single-input"
                 inputMode="numeric"
                 maxLength={4}
-                placeholder="예: 5862"
+                placeholder="예: 0001"
                 value={inputId}
                 onChange={(event) => onChangeInput(event.target.value.replace(/\D/g, '').slice(0, 4))}
                 onKeyDown={(event) => {

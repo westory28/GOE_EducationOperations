@@ -30,6 +30,8 @@ const toNumber = (value: unknown): number | null => {
 
 const round = (value: number) => Math.round(value * 100) / 100;
 
+const formatSequentialId = (index: number): string => String(index + 1).padStart(4, '0');
+
 const lastFourDigits = (value: unknown): string => {
     const digits = String(value ?? '').replace(/\D/g, '');
     if (!digits) return '';
@@ -124,7 +126,7 @@ const parsePrePostWorkbook = (workbook: XLSX.WorkBook, fileName: string): Dashbo
                 .filter((item): item is CompetencyScore => item !== null);
 
             return {
-                traineeId: lastFourDigits(idKey ? postRow[idKey] : '') || String(1000 + index).slice(-4),
+                traineeId: formatSequentialId(index),
                 name: String(nameKey ? postRow[nameKey] ?? preRow[nameKey] ?? '' : '').trim() || `연수생 ${index + 1}`,
                 organization: String(orgKey ? postRow[orgKey] ?? preRow[orgKey] ?? '' : '').trim() || '소속 미입력',
                 trackLabel: String(trackKey ? postRow[trackKey] ?? preRow[trackKey] ?? '' : '').trim() || '연수 과정',

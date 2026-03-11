@@ -4,7 +4,7 @@ export const mockDataset: DashboardDataset = {
     sourceLabel: '기본 더미 데이터',
     participants: [
         {
-            traineeId: '5862',
+            traineeId: '0001',
             name: '정미리',
             organization: '원당초',
             trackLabel: 'AI·디지털 아카데미 기본 과정',
@@ -18,7 +18,7 @@ export const mockDataset: DashboardDataset = {
             ]
         },
         {
-            traineeId: '2147',
+            traineeId: '0002',
             name: '김하늘',
             organization: '도담중',
             trackLabel: 'AI·디지털 아카데미 기본 과정',
@@ -32,7 +32,7 @@ export const mockDataset: DashboardDataset = {
             ]
         },
         {
-            traineeId: '9034',
+            traineeId: '0003',
             name: '이서윤',
             organization: '하늘고',
             trackLabel: 'AI·디지털 아카데미 심화 과정',
