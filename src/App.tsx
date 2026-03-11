@@ -34,9 +34,7 @@ const App: React.FC = () => {
         setSelectedParticipantId(participant.traineeId);
     }, [participant]);
 
-    const activeCourse = useMemo(() => {
-        return courses.find((course) => course.id === selectedCourseId) ?? courses[0] ?? null;
-    }, [courses, selectedCourseId]);
+    const activeCourse = useMemo(() => courses.find((course) => course.id === selectedCourseId) ?? courses[0] ?? null, [courses, selectedCourseId]);
 
     const activeParticipant = useMemo(() => {
         if (!activeCourse) return participant;
@@ -63,7 +61,7 @@ const App: React.FC = () => {
 
         const matched = dataset.participants.find((item) => item.traineeId === normalized);
         if (!matched) {
-            setErrorMessage('테스트용 더미데이터에서는 0001부터 등록된 교사만 조회할 수 있습니다.');
+            setErrorMessage('테스트용 더미 데이터에서는 0001부터 등록된 연수생만 조회할 수 있습니다.');
             return;
         }
 
@@ -102,7 +100,7 @@ const App: React.FC = () => {
                         <h1>교원 연수 결과 확인</h1>
                         <p>
                             고유번호 4자리를 입력하면 더미데이터 기반 분석 화면으로 이동합니다.
-                            현재는 테스트 모드이며 `0001`, `0002`, `0003`, `0004`로 바로 확인할 수 있습니다.
+                            현재는 테스트 모드이며 `0001`, `0002`, `0003`, `0004`처럼 바로 확인할 수 있습니다.
                         </p>
 
                         <LoginPanel
@@ -125,7 +123,7 @@ const App: React.FC = () => {
         <div className="survey-app-shell dashboard-shell">
             <aside className="dashboard-sidebar">
                 <div className="brand-card">
-                    <div className="brand-mark">🎓</div>
+                    <div className="brand-mark">학</div>
                     <div>
                         <h1>Hi-Cycle 역량 진단 대시보드</h1>
                         <p>경기도교육청 AI·디지털 미래형 교원연수 사전·사후 변화 분석</p>
@@ -227,36 +225,43 @@ const App: React.FC = () => {
                     </article>
                 </section>
 
-                <section className="chart-panel">
-                    <div className="panel-heading">
-                        <div>
-                            <span className="panel-kicker">종합 레이더</span>
-                            <h3>역량별 사전·사후 레이더 - {activeParticipant.name} vs 전체</h3>
-                            <p>5점 리커트 척도 기준 · 더미데이터 기반 비교</p>
+                <section className="insight-layout">
+                    <section className="chart-panel">
+                        <div className="panel-heading">
+                            <div>
+                                <span className="panel-kicker">종합 레이더</span>
+                                <h3>역량별 사전·사후 레이더 - {activeParticipant.name} vs 전체</h3>
+                                <p>5점 리커트 척도 기준 · 더미데이터 기반 비교</p>
+                            </div>
+                            <div className="panel-tags">
+                                <span>과정 비교</span>
+                                <span>개인 성장</span>
+                                <span>전체 평균</span>
+                            </div>
                         </div>
-                        <div className="panel-tags">
-                            <span>과정 비교</span>
-                            <span>개인 성장</span>
-                            <span>전체 평균</span>
-                        </div>
-                    </div>
 
-                    <ScoreComparisonChart participant={activeParticipant} />
+                        <ScoreComparisonChart participant={activeParticipant} />
+                    </section>
+
+                    <section className="insight-card insight-card-side">
+                        <span className="panel-kicker">고정 피드백</span>
+                        <h3>{advice?.title}</h3>
+                        <p className="insight-summary">{advice?.summary}</p>
+                        <div className="insight-list">
+                            {advice?.points.map((point) => (
+                                <div key={point} className="insight-item">
+                                    {point}
+                                </div>
+                            ))}
+                        </div>
+                    </section>
                 </section>
 
                 <section className="bottom-grid">
                     <section className="competency-grid">
                         {activeParticipant.competencies.map((competency) => (
                             <article key={competency.label} className="competency-card-dark">
-                                <span className="competency-icon">
-                                    {competency.label.includes('에듀테크')
-                                        ? '💻'
-                                        : competency.label.includes('데이터')
-                                          ? '📊'
-                                          : competency.label.includes('컴퓨팅')
-                                            ? '🧩'
-                                            : '🤖'}
-                                </span>
+                                <span className="competency-icon">역</span>
                                 <strong>{competency.label}</strong>
                                 <div className="competency-values">
                                     <span>{competency.pre.toFixed(2)}</span>
@@ -272,19 +277,6 @@ const App: React.FC = () => {
                                 </p>
                             </article>
                         ))}
-                    </section>
-
-                    <section className="insight-card">
-                        <span className="panel-kicker">고정 피드백</span>
-                        <h3>{advice?.title}</h3>
-                        <p className="insight-summary">{advice?.summary}</p>
-                        <div className="insight-list">
-                            {advice?.points.map((point) => (
-                                <div key={point} className="insight-item">
-                                    {point}
-                                </div>
-                            ))}
-                        </div>
                     </section>
                 </section>
             </main>

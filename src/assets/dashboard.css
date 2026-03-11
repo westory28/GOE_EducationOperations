@@ -453,9 +453,19 @@ input {
     padding: 8px 0 4px;
 }
 
+.insight-layout {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+    gap: 18px;
+}
+
+.insight-card-side {
+    height: 100%;
+}
+
 .bottom-grid {
     display: grid;
-    grid-template-columns: 1.35fr 0.85fr;
+    grid-template-columns: 1fr;
     gap: 18px;
 }
 
@@ -549,6 +559,7 @@ input {
 
 @media (max-width: 960px) {
     .dashboard-metrics,
+    .insight-layout,
     .bottom-grid,
     .competency-grid {
         grid-template-columns: 1fr;
