@@ -1,4 +1,4 @@
-import React, { useMemo, useState } from 'react';
+import React, { useEffect, useMemo, useState } from 'react';
 import './assets/dashboard.css';
 import type { DashboardDataset, ParticipantRecord } from './features/survey-dashboard/types';
 import { getAdviceForParticipant, loadMockDataset } from './features/survey-dashboard/services/traineeData';
@@ -7,9 +7,11 @@ import { LoginPanel } from './features/survey-dashboard/components/LoginPanel';
 import { ScoreComparisonChart } from './features/survey-dashboard/components/ScoreComparisonChart';
 
 const App: React.FC = () => {
-    const [dataset, setDataset] = useState<DashboardDataset>(loadMockDataset());
+    const [dataset] = useState<DashboardDataset>(loadMockDataset());
     const [inputId, setInputId] = useState('');
     const [loggedInId, setLoggedInId] = useState<string | null>(null);
+    const [selectedCourseId, setSelectedCourseId] = useState<string>('');
+    const [selectedParticipantId, setSelectedParticipantId] = useState<string>('');
     const [errorMessage, setErrorMessage] = useState('');
 
     const participant = useMemo<ParticipantRecord | null>(() => {
@@ -17,7 +19,40 @@ const App: React.FC = () => {
         return dataset.participants.find((item) => item.traineeId === loggedInId) ?? null;
     }, [dataset.participants, loggedInId]);
 
-    const advice = participant ? getAdviceForParticipant(participant) : null;
+    const courses = useMemo(
+        () =>
+            dataset.summary.courses.map((course) => ({
+                ...course,
+                participants: dataset.participants.filter((item) => item.courseId === course.id),
+            })),
+        [dataset],
+    );
+
+    useEffect(() => {
+        if (!participant) return;
+        setSelectedCourseId(participant.courseId);
+        setSelectedParticipantId(participant.traineeId);
+    }, [participant]);
+
+    const activeCourse = useMemo(() => {
+        return courses.find((course) => course.id === selectedCourseId) ?? courses[0] ?? null;
+    }, [courses, selectedCourseId]);
+
+    const activeParticipant = useMemo(() => {
+        if (!activeCourse) return participant;
+        return activeCourse.participants.find((item) => item.traineeId === selectedParticipantId) ?? participant;
+    }, [activeCourse, participant, selectedParticipantId]);
+
+    const advice = activeParticipant ? getAdviceForParticipant(activeParticipant) : null;
+
+    const courseAverages = useMemo(() => {
+        if (!activeCourse) return null;
+        const list = activeCourse.participants;
+        const preAverage = list.reduce((sum, item) => sum + item.preOverall, 0) / list.length;
+        const postAverage = list.reduce((sum, item) => sum + item.postOverall, 0) / list.length;
+        const growthAverage = list.reduce((sum, item) => sum + item.growth, 0) / list.length;
+        return { preAverage, postAverage, growthAverage };
+    }, [activeCourse]);
 
     const handleLogin = () => {
         const normalized = inputId.replace(/\D/g, '').slice(0, 4);
@@ -28,25 +63,31 @@ const App: React.FC = () => {
 
         const matched = dataset.participants.find((item) => item.traineeId === normalized);
         if (!matched) {
-            setErrorMessage('해당 고유번호의 결과를 찾지 못했습니다. 업로드한 엑셀과 번호를 다시 확인해 주세요.');
+            setErrorMessage('테스트용 더미데이터에서는 0001부터 등록된 교사만 조회할 수 있습니다.');
             return;
         }
 
         setLoggedInId(normalized);
+        setSelectedCourseId(matched.courseId);
+        setSelectedParticipantId(matched.traineeId);
         setInputId(normalized);
         setErrorMessage('');
-    };
-
-    const handleDownload = () => {
-        if (!participant) return;
-        downloadParticipantReport(participant, dataset.summary);
     };
 
     const handleBackToLogin = () => {
         setLoggedInId(null);
         setInputId('');
         setErrorMessage('');
-        setDataset(loadMockDataset());
+    };
+
+    const handleParticipantSelect = (nextParticipant: ParticipantRecord) => {
+        setSelectedParticipantId(nextParticipant.traineeId);
+        setSelectedCourseId(nextParticipant.courseId);
+    };
+
+    const handleDownload = () => {
+        if (!activeParticipant) return;
+        downloadParticipantReport(activeParticipant, dataset.summary);
     };
 
     if (!participant) {
@@ -57,11 +98,11 @@ const App: React.FC = () => {
 
                 <main className="login-page">
                     <section className="login-hero-card">
-                        <span className="hero-badge">GOE Education Operations</span>
+                        <span className="hero-badge">Hi-Cycle Mock Dashboard</span>
                         <h1>교원 연수 결과 확인</h1>
                         <p>
-                            고유번호 4자리를 입력하면 더미 데이터 기반 개인 분석 화면으로 이동합니다.
-                            현재는 테스트 모드이며 `0001`, `0002`, `0003`으로 바로 확인할 수 있습니다.
+                            고유번호 4자리를 입력하면 더미데이터 기반 분석 화면으로 이동합니다.
+                            현재는 테스트 모드이며 `0001`, `0002`, `0003`, `0004`로 바로 확인할 수 있습니다.
                         </p>
 
                         <LoginPanel
@@ -78,148 +119,174 @@ const App: React.FC = () => {
         );
     }
 
+    if (!activeParticipant || !activeCourse || !courseAverages) return null;
+
     return (
-        <div className="survey-app-shell">
-            <div className="survey-background-glow survey-background-glow-left" />
-            <div className="survey-background-glow survey-background-glow-right" />
-
-            <main className="survey-page">
-                <section className="hero-card">
-                    <div className="hero-copy">
-                        <span className="hero-badge">GOE Education Operations</span>
-                        <h1>교원 연수 설문 결과 분석 대시보드</h1>
-                        <p>
-                            구글 로그인 없이 고유번호 4자리로 접속하고, 더미 데이터를 바탕으로 사전·사후 변화와
-                            연수생 전체 평균을 한 번에 비교합니다.
-                        </p>
+        <div className="survey-app-shell dashboard-shell">
+            <aside className="dashboard-sidebar">
+                <div className="brand-card">
+                    <div className="brand-mark">🎓</div>
+                    <div>
+                        <h1>Hi-Cycle 역량 진단 대시보드</h1>
+                        <p>경기도교육청 AI·디지털 미래형 교원연수 사전·사후 변화 분석</p>
                     </div>
+                </div>
 
-                    <div className="hero-side">
-                        <div className="hero-pill">모바일 우선</div>
-                        <div className="hero-pill">AI 호출 없음</div>
-                        <div className="hero-pill">더미 데이터 테스트</div>
+                <section className="sidebar-card">
+                    <span className="sidebar-title">연수 과정 선택</span>
+                    <div className="sidebar-list">
+                        {courses.map((course) => (
+                            <button
+                                key={course.id}
+                                type="button"
+                                className={`sidebar-item ${course.id === activeCourse.id ? 'is-active' : ''}`}
+                                onClick={() => {
+                                    setSelectedCourseId(course.id);
+                                    setSelectedParticipantId(course.participants[0]?.traineeId ?? activeParticipant.traineeId);
+                                }}
+                            >
+                                <strong>{course.label}</strong>
+                                <span>{course.participants.length}명</span>
+                            </button>
+                        ))}
                     </div>
                 </section>
 
-                <>
-                        <section className="summary-grid">
-                            <article className="metric-card">
-                                <span className="metric-label">사전 평균</span>
-                                <strong>{participant.preOverall.toFixed(2)}</strong>
-                                <p>{participant.name}님의 시작 점수</p>
+                <section className="sidebar-card">
+                    <span className="sidebar-title">교사 선택</span>
+                    <div className="sidebar-list compact">
+                        <button
+                            type="button"
+                            className={`sidebar-item ${activeParticipant.traineeId === participant.traineeId ? 'is-accent' : ''}`}
+                            onClick={() => handleParticipantSelect(participant)}
+                        >
+                            <strong>내 결과로 돌아가기</strong>
+                            <span>{participant.name}</span>
+                        </button>
+                        {activeCourse.participants.map((item) => (
+                            <button
+                                key={item.traineeId}
+                                type="button"
+                                className={`sidebar-item ${item.traineeId === activeParticipant.traineeId ? 'is-active' : ''}`}
+                                onClick={() => handleParticipantSelect(item)}
+                            >
+                                <strong>{item.name}</strong>
+                                <span>{item.organization}</span>
+                            </button>
+                        ))}
+                    </div>
+                </section>
+            </aside>
+
+            <main className="dashboard-main">
+                <section className="dashboard-hero">
+                    <div>
+                        <span className="hero-chip">{activeCourse.label}</span>
+                        <h2>{activeParticipant.name} 분석 리포트</h2>
+                        <p>
+                            참여 인원 {activeCourse.participants.length}명 · 역량 영역 {activeParticipant.competencies.length}개 ·
+                            조회 번호 {activeParticipant.traineeId}
+                        </p>
+                    </div>
+                    <div className="hero-actions">
+                        <button type="button" className="ghost-button light" onClick={handleBackToLogin}>
+                            로그인 화면
+                        </button>
+                        <button type="button" className="primary-button" onClick={handleDownload}>
+                            결과지 다운로드
+                        </button>
+                    </div>
+                </section>
+
+                <section className="dashboard-metrics">
+                    <article className="dark-metric-card">
+                        <span>나의 사전 평균</span>
+                        <strong>{activeParticipant.preOverall.toFixed(2)}</strong>
+                        <p>과정 평균 {courseAverages.preAverage.toFixed(2)}</p>
+                    </article>
+                    <article className="dark-metric-card">
+                        <span>나의 사후 평균</span>
+                        <strong>{activeParticipant.postOverall.toFixed(2)}</strong>
+                        <p>과정 평균 {courseAverages.postAverage.toFixed(2)}</p>
+                    </article>
+                    <article className="dark-metric-card">
+                        <span>성장 폭</span>
+                        <strong className={activeParticipant.growth >= 0 ? 'metric-up' : 'metric-down'}>
+                            {activeParticipant.growth >= 0 ? '+' : ''}
+                            {activeParticipant.growth.toFixed(2)}
+                        </strong>
+                        <p>과정 평균 {courseAverages.growthAverage.toFixed(2)}</p>
+                    </article>
+                    <article className="dark-metric-card">
+                        <span>전체 평균 대비</span>
+                        <strong className={activeParticipant.cohortGapPost >= 0 ? 'metric-up' : 'metric-down'}>
+                            {activeParticipant.cohortGapPost >= 0 ? '+' : ''}
+                            {activeParticipant.cohortGapPost.toFixed(2)}
+                        </strong>
+                        <p>{activeParticipant.organization}</p>
+                    </article>
+                </section>
+
+                <section className="chart-panel">
+                    <div className="panel-heading">
+                        <div>
+                            <span className="panel-kicker">종합 레이더</span>
+                            <h3>역량별 사전·사후 레이더 - {activeParticipant.name} vs 전체</h3>
+                            <p>5점 리커트 척도 기준 · 더미데이터 기반 비교</p>
+                        </div>
+                        <div className="panel-tags">
+                            <span>과정 비교</span>
+                            <span>개인 성장</span>
+                            <span>전체 평균</span>
+                        </div>
+                    </div>
+
+                    <ScoreComparisonChart participant={activeParticipant} />
+                </section>
+
+                <section className="bottom-grid">
+                    <section className="competency-grid">
+                        {activeParticipant.competencies.map((competency) => (
+                            <article key={competency.label} className="competency-card-dark">
+                                <span className="competency-icon">
+                                    {competency.label.includes('에듀테크')
+                                        ? '💻'
+                                        : competency.label.includes('데이터')
+                                          ? '📊'
+                                          : competency.label.includes('컴퓨팅')
+                                            ? '🧩'
+                                            : '🤖'}
+                                </span>
+                                <strong>{competency.label}</strong>
+                                <div className="competency-values">
+                                    <span>{competency.pre.toFixed(2)}</span>
+                                    <em>→</em>
+                                    <span>{competency.post.toFixed(2)}</span>
+                                    <b className={competency.growth >= 0 ? 'metric-up' : 'metric-down'}>
+                                        {competency.growth >= 0 ? '+' : ''}
+                                        {competency.growth.toFixed(2)}
+                                    </b>
+                                </div>
+                                <p>
+                                    전체 평균 {competency.preAverage.toFixed(2)} → {competency.postAverage.toFixed(2)}
+                                </p>
                             </article>
+                        ))}
+                    </section>
 
-                            <article className="metric-card">
-                                <span className="metric-label">사후 평균</span>
-                                <strong>{participant.postOverall.toFixed(2)}</strong>
-                                <p>현재 도달한 역량 수준</p>
-                            </article>
-
-                            <article className="metric-card">
-                                <span className="metric-label">향상 폭</span>
-                                <strong className={participant.growth >= 0 ? 'metric-positive' : 'metric-negative'}>
-                                    {participant.growth >= 0 ? '+' : ''}
-                                    {participant.growth.toFixed(2)}
-                                </strong>
-                                <p>사전 대비 변화량</p>
-                            </article>
-
-                            <article className="metric-card">
-                                <span className="metric-label">전체 평균 대비</span>
-                                <strong className={participant.cohortGapPost >= 0 ? 'metric-positive' : 'metric-negative'}>
-                                    {participant.cohortGapPost >= 0 ? '+' : ''}
-                                    {participant.cohortGapPost.toFixed(2)}
-                                </strong>
-                                <p>사후 기준 연수생 전체와의 차이</p>
-                            </article>
-                        </section>
-
-                        <section className="chart-card">
-                            <div className="card-header">
-                                <div>
-                                    <span className="section-kicker">핵심 비교</span>
-                                    <h2>
-                                        {participant.organization} · {participant.name} · {participant.traineeId}
-                                    </h2>
+                    <section className="insight-card">
+                        <span className="panel-kicker">고정 피드백</span>
+                        <h3>{advice?.title}</h3>
+                        <p className="insight-summary">{advice?.summary}</p>
+                        <div className="insight-list">
+                            {advice?.points.map((point) => (
+                                <div key={point} className="insight-item">
+                                    {point}
                                 </div>
-                                <div className="profile-chip-group">
-                                    <span className="profile-chip">{participant.trackLabel}</span>
-                                    <span className="profile-chip">전체 {dataset.participants.length}명 비교</span>
-                                </div>
-                            </div>
-
-                            <ScoreComparisonChart participant={participant} />
-                        </section>
-
-                        <section className="analysis-grid">
-                            <article className="detail-card">
-                                <div className="card-header">
-                                    <div>
-                                        <span className="section-kicker">영역 분석</span>
-                                        <h2>세부 역량 변화</h2>
-                                    </div>
-                                </div>
-
-                                <div className="competency-list">
-                                    {participant.competencies.map((competency) => (
-                                        <div key={competency.label} className="competency-row">
-                                            <div>
-                                                <strong>{competency.label}</strong>
-                                                <p>
-                                                    사전 {competency.pre.toFixed(2)} / 사후 {competency.post.toFixed(2)}
-                                                </p>
-                                            </div>
-                                            <div className="competency-trend">
-                                                <span>{competency.postAverage.toFixed(2)} 전체 평균</span>
-                                                <strong className={competency.growth >= 0 ? 'metric-positive' : 'metric-negative'}>
-                                                    {competency.growth >= 0 ? '+' : ''}
-                                                    {competency.growth.toFixed(2)}
-                                                </strong>
-                                            </div>
-                                        </div>
-                                    ))}
-                                </div>
-                            </article>
-
-                            <article className="detail-card advice-card">
-                                <div className="card-header">
-                                    <div>
-                                        <span className="section-kicker">고정 피드백</span>
-                                        <h2>{advice?.title}</h2>
-                                    </div>
-                                </div>
-
-                                <p className="advice-lead">{advice?.summary}</p>
-                                <div className="advice-points">
-                                    {advice?.points.map((point) => (
-                                        <div key={point} className="advice-point">
-                                            {point}
-                                        </div>
-                                    ))}
-                                </div>
-                                <div className="advice-note">
-                                    AI를 호출하지 않고 점수 구간 조건문으로 생성된 안내입니다. 개인정보는 고유번호 4자리 기준으로만 조회합니다.
-                                </div>
-                            </article>
-                        </section>
-
-                        <section className="download-card">
-                            <div>
-                                <span className="section-kicker">결과지 저장</span>
-                                <h2>개인 분석 결과 엑셀 다운로드</h2>
-                                <p>현재 화면의 핵심 수치와 세부 역량 변화를 `.xlsx` 파일로 내려받을 수 있습니다.</p>
-                            </div>
-
-                            <div className="download-actions">
-                                <button type="button" className="ghost-button" onClick={handleBackToLogin}>
-                                    로그인 화면으로
-                                </button>
-                                <button type="button" className="primary-button" onClick={handleDownload}>
-                                    결과지 다운로드
-                                </button>
-                            </div>
-                        </section>
-                </>
+                            ))}
+                        </div>
+                    </section>
+                </section>
             </main>
         </div>
     );

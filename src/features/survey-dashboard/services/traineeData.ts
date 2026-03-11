@@ -127,6 +127,7 @@ const parsePrePostWorkbook = (workbook: XLSX.WorkBook, fileName: string): Dashbo
 
             return {
                 traineeId: formatSequentialId(index),
+                courseId: 'uploaded-course',
                 name: String(nameKey ? postRow[nameKey] ?? preRow[nameKey] ?? '' : '').trim() || `연수생 ${index + 1}`,
                 organization: String(orgKey ? postRow[orgKey] ?? preRow[orgKey] ?? '' : '').trim() || '소속 미입력',
                 trackLabel: String(trackKey ? postRow[trackKey] ?? preRow[trackKey] ?? '' : '').trim() || '연수 과정',
@@ -181,7 +182,14 @@ const parsePrePostWorkbook = (workbook: XLSX.WorkBook, fileName: string): Dashbo
             participantCount: normalizedParticipants.length,
             preAverage: average(normalizedParticipants.map((participant) => participant.preOverall)),
             postAverage: cohortPostAverage,
-            growthAverage: average(normalizedParticipants.map((participant) => participant.growth))
+            growthAverage: average(normalizedParticipants.map((participant) => participant.growth)),
+            courses: [
+                {
+                    id: 'uploaded-course',
+                    label: '업로드 데이터',
+                    participantCount: normalizedParticipants.length,
+                },
+            ],
         }
     };
 };

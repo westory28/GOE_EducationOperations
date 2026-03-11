@@ -9,6 +9,7 @@ export interface CompetencyScore {
 
 export interface ParticipantRecord {
     traineeId: string;
+    courseId: string;
     name: string;
     organization: string;
     trackLabel: string;
@@ -19,6 +20,12 @@ export interface ParticipantRecord {
     competencies: CompetencyScore[];
 }
 
+export interface CourseSummary {
+    id: string;
+    label: string;
+    participantCount: number;
+}
+
 export interface DatasetSummary {
     sourceFileName: string;
     sourceLabel: string;
@@ -27,6 +34,7 @@ export interface DatasetSummary {
     preAverage: number;
     postAverage: number;
     growthAverage: number;
+    courses: CourseSummary[];
 }
 
 export interface DashboardDataset {
