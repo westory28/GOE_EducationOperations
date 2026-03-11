@@ -1,0 +1,1181 @@
+{
+  "sourceLabel": "2025 \ud30c\uc77c\ub7ff \uacb0\uacfc \ud1b5\uc9c0",
+  "participants": [
+    {
+      "traineeId": "0001",
+      "courseId": "pilot-2025",
+      "name": "\uc5ec\uc5f0",
+      "organization": "\uace000\ud56d\ucd08",
+      "trackLabel": "2025 \ud30c\uc77c\ub7ff \uacb0\uacfc \ud1b5\uc9c0",
+      "preOverall": 3.3,
+      "postOverall": 5,
+      "growth": 1.7,
+      "cohortGapPost": 0.37,
+      "competencies": [
+        {
+          "label": "\ucef4\ud4e8\ud305\uc0ac\uace0\ub825",
+          "pre": 3.6,
+          "post": 5,
+          "preAverage": 3.48,
+          "postAverage": 4.65,
+          "growth": 1.4
+        },
+        {
+          "label": "\uc778\uacf5\uc9c0\ub2a5 \ud65c\uc6a9",
+          "pre": 3,
+          "post": 5,
+          "preAverage": 3.47,
+          "postAverage": 4.6,
+          "growth": 2
+        }
+      ]
+    },
+    {
+      "traineeId": "0002",
+      "courseId": "pilot-2025",
+      "name": "\uae40\uc218",
+      "organization": "\uad000\ucd08",
+      "trackLabel": "2025 \ud30c\uc77c\ub7ff \uacb0\uacfc \ud1b5\uc9c0",
+      "preOverall": 4.2,
+      "postOverall": 3.8,
+      "growth": -0.4,
+      "cohortGapPost": -0.83,
+      "competencies": [
+        {
+          "label": "\ucef4\ud4e8\ud305\uc0ac\uace0\ub825",
+          "pre": 4.4,
+          "post": 4,
+          "preAverage": 3.48,
+          "postAverage": 4.65,
+          "growth": -0.4
+        },
+        {
+          "label": "\uc778\uacf5\uc9c0\ub2a5 \ud65c\uc6a9",
+          "pre": 4,
+          "post": 3.6,
+          "preAverage": 3.47,
+          "postAverage": 4.6,
+          "growth": -0.4
+        }
+      ]
+    },
+    {
+      "traineeId": "0003",
+      "courseId": "pilot-2025",
+      "name": "\uae40\uc601",
+      "organization": "\ub3c40\uc911",
+      "trackLabel": "2025 \ud30c\uc77c\ub7ff \uacb0\uacfc \ud1b5\uc9c0",
+      "preOverall": 2.7,
+      "postOverall": 5,
+      "growth": 2.3,
+      "cohortGapPost": 0.37,
+      "competencies": [
+        {
+          "label": "\ucef4\ud4e8\ud305\uc0ac\uace0\ub825",
+          "pre": 2.4,
+          "post": 5,
+          "preAverage": 3.48,
+          "postAverage": 4.65,
+          "growth": 2.6
+        },
+        {
+          "label": "\uc778\uacf5\uc9c0\ub2a5 \ud65c\uc6a9",
+          "pre": 3,
+          "post": 5,
+          "preAverage": 3.47,
+          "postAverage": 4.6,
+          "growth": 2
+        }
+      ]
+    },
+    {
+      "traineeId": "0004",
+      "courseId": "pilot-2025",
+      "name": "\uc804\uc601",
+      "organization": "\uc7a500\uc911",
+      "trackLabel": "2025 \ud30c\uc77c\ub7ff \uacb0\uacfc \ud1b5\uc9c0",
+      "preOverall": 3.3,
+      "postOverall": 4.6,
+      "growth": 1.3,
+      "cohortGapPost": -0.03,
+      "competencies": [
+        {
+          "label": "\ucef4\ud4e8\ud305\uc0ac\uace0\ub825",
+          "pre": 3,
+          "post": 4.6,
+          "preAverage": 3.48,
+          "postAverage": 4.65,
+          "growth": 1.6
+        },
+        {
+          "label": "\uc778\uacf5\uc9c0\ub2a5 \ud65c\uc6a9",
+          "pre": 3.6,
+          "post": 4.6,
+          "preAverage": 3.47,
+          "postAverage": 4.6,
+          "growth": 1
+        }
+      ]
+    },
+    {
+      "traineeId": "0005",
+      "courseId": "pilot-2025",
+      "name": "\uacfd\ud6c8",
+      "organization": "\uc22d00\uace0",
+      "trackLabel": "2025 \ud30c\uc77c\ub7ff \uacb0\uacfc \ud1b5\uc9c0",
+      "preOverall": 3.9,
+      "postOverall": 4.6,
+      "growth": 0.7,
+      "cohortGapPost": -0.03,
+      "competencies": [
+        {
+          "label": "\ucef4\ud4e8\ud305\uc0ac\uace0\ub825",
+          "pre": 4.2,
+          "post": 5,
+          "preAverage": 3.48,
+          "postAverage": 4.65,
+          "growth": 0.8
+        },
+        {
+          "label": "\uc778\uacf5\uc9c0\ub2a5 \ud65c\uc6a9",
+          "pre": 3.6,
+          "post": 4.2,
+          "preAverage": 3.47,
+          "postAverage": 4.6,
+          "growth": 0.6
+        }
+      ]
+    },
+    {
+      "traineeId": "0006",
+      "courseId": "pilot-2025",
+      "name": "\ucd5c\ud604",
+      "organization": "\uc5440\ucd08",
+      "trackLabel": "2025 \ud30c\uc77c\ub7ff \uacb0\uacfc \ud1b5\uc9c0",
+      "preOverall": 1.9,
+      "postOverall": 4.9,
+      "growth": 3,
+      "cohortGapPost": 0.27,
+      "competencies": [
+        {
+          "label": "\ucef4\ud4e8\ud305\uc0ac\uace0\ub825",
+          "pre": 1.6,
+          "post": 5,
+          "preAverage": 3.48,
+          "postAverage": 4.65,
+          "growth": 3.4
+        },
+        {
+          "label": "\uc778\uacf5\uc9c0\ub2a5 \ud65c\uc6a9",
+          "pre": 2.2,
+          "post": 4.8,
+          "preAverage": 3.47,
+          "postAverage": 4.6,
+          "growth": 2.6
+        }
+      ]
+    },
+    {
+      "traineeId": "0007",
+      "courseId": "pilot-2025",
+      "name": "\ubc30\ud76c",
+      "organization": "0\ucd08",
+      "trackLabel": "2025 \ud30c\uc77c\ub7ff \uacb0\uacfc \ud1b5\uc9c0",
+      "preOverall": 3,
+      "postOverall": 5,
+      "growth": 2,
+      "cohortGapPost": 0.37,
+      "competencies": [
+        {
+          "label": "\ucef4\ud4e8\ud305\uc0ac\uace0\ub825",
+          "pre": 3,
+          "post": 5,
+          "preAverage": 3.48,
+          "postAverage": 4.65,
+          "growth": 2
+        },
+        {
+          "label": "\uc778\uacf5\uc9c0\ub2a5 \ud65c\uc6a9",
+          "pre": 3,
+          "post": 5,
+          "preAverage": 3.47,
+          "postAverage": 4.6,
+          "growth": 2
+        }
+      ]
+    },
+    {
+      "traineeId": "0008",
+      "courseId": "pilot-2025",
+      "name": "\ubbf8",
+      "organization": "\ud48d0\uc911",
+      "trackLabel": "2025 \ud30c\uc77c\ub7ff \uacb0\uacfc \ud1b5\uc9c0",
+      "preOverall": 3,
+      "postOverall": 5,
+      "growth": 2,
+      "cohortGapPost": 0.37,
+      "competencies": [
+        {
+          "label": "\ucef4\ud4e8\ud305\uc0ac\uace0\ub825",
+          "pre": 3,
+          "post": 5,
+          "preAverage": 3.48,
+          "postAverage": 4.65,
+          "growth": 2
+        },
+        {
+          "label": "\uc778\uacf5\uc9c0\ub2a5 \ud65c\uc6a9",
+          "pre": 3,
+          "post": 5,
+          "preAverage": 3.47,
+          "postAverage": 4.6,
+          "growth": 2
+        }
+      ]
+    },
+    {
+      "traineeId": "0009",
+      "courseId": "pilot-2025",
+      "name": "\uc815\ub9ac",
+      "organization": "\uc6d00\ucd08",
+      "trackLabel": "2025 \ud30c\uc77c\ub7ff \uacb0\uacfc \ud1b5\uc9c0",
+      "preOverall": 4.6,
+      "postOverall": 3.9,
+      "growth": -0.7,
+      "cohortGapPost": -0.73,
+      "competencies": [
+        {
+          "label": "\ucef4\ud4e8\ud305\uc0ac\uace0\ub825",
+          "pre": 4.6,
+          "post": 3.8,
+          "preAverage": 3.48,
+          "postAverage": 4.65,
+          "growth": -0.8
+        },
+        {
+          "label": "\uc778\uacf5\uc9c0\ub2a5 \ud65c\uc6a9",
+          "pre": 4.6,
+          "post": 4,
+          "preAverage": 3.47,
+          "postAverage": 4.6,
+          "growth": -0.6
+        }
+      ]
+    },
+    {
+      "traineeId": "0010",
+      "courseId": "pilot-2025",
+      "name": "\uc624\uc6d0",
+      "organization": "\ub3000\ucd08",
+      "trackLabel": "2025 \ud30c\uc77c\ub7ff \uacb0\uacfc \ud1b5\uc9c0",
+      "preOverall": 4,
+      "postOverall": 4.5,
+      "growth": 0.5,
+      "cohortGapPost": -0.13,
+      "competencies": [
+        {
+          "label": "\ucef4\ud4e8\ud305\uc0ac\uace0\ub825",
+          "pre": 4,
+          "post": 5,
+          "preAverage": 3.48,
+          "postAverage": 4.65,
+          "growth": 1
+        },
+        {
+          "label": "\uc778\uacf5\uc9c0\ub2a5 \ud65c\uc6a9",
+          "pre": 4,
+          "post": 4,
+          "preAverage": 3.47,
+          "postAverage": 4.6,
+          "growth": 0
+        }
+      ]
+    },
+    {
+      "traineeId": "0011",
+      "courseId": "pilot-2025",
+      "name": "\uc1a1\uc601",
+      "organization": "\ud55c0\ucd08",
+      "trackLabel": "2025 \ud30c\uc77c\ub7ff \uacb0\uacfc \ud1b5\uc9c0",
+      "preOverall": 3.6,
+      "postOverall": 4,
+      "growth": 0.4,
+      "cohortGapPost": -0.63,
+      "competencies": [
+        {
+          "label": "\ucef4\ud4e8\ud305\uc0ac\uace0\ub825",
+          "pre": 3.4,
+          "post": 4,
+          "preAverage": 3.48,
+          "postAverage": 4.65,
+          "growth": 0.6
+        },
+        {
+          "label": "\uc778\uacf5\uc9c0\ub2a5 \ud65c\uc6a9",
+          "pre": 3.8,
+          "post": 4,
+          "preAverage": 3.47,
+          "postAverage": 4.6,
+          "growth": 0.2
+        }
+      ]
+    },
+    {
+      "traineeId": "0012",
+      "courseId": "pilot-2025",
+      "name": "\uae40\uc8fc",
+      "organization": "\uc9110\ucd08",
+      "trackLabel": "2025 \ud30c\uc77c\ub7ff \uacb0\uacfc \ud1b5\uc9c0",
+      "preOverall": 3.5,
+      "postOverall": 5,
+      "growth": 1.5,
+      "cohortGapPost": 0.37,
+      "competencies": [
+        {
+          "label": "\ucef4\ud4e8\ud305\uc0ac\uace0\ub825",
+          "pre": 3.4,
+          "post": 5,
+          "preAverage": 3.48,
+          "postAverage": 4.65,
+          "growth": 1.6
+        },
+        {
+          "label": "\uc778\uacf5\uc9c0\ub2a5 \ud65c\uc6a9",
+          "pre": 3.6,
+          "post": 5,
+          "preAverage": 3.47,
+          "postAverage": 4.6,
+          "growth": 1.4
+        }
+      ]
+    },
+    {
+      "traineeId": "0013",
+      "courseId": "pilot-2025",
+      "name": "\uae40\ud558",
+      "organization": "\ud6380\ucd08",
+      "trackLabel": "2025 \ud30c\uc77c\ub7ff \uacb0\uacfc \ud1b5\uc9c0",
+      "preOverall": 4.6,
+      "postOverall": 5,
+      "growth": 0.4,
+      "cohortGapPost": 0.37,
+      "competencies": [
+        {
+          "label": "\ucef4\ud4e8\ud305\uc0ac\uace0\ub825",
+          "pre": 4.2,
+          "post": 5,
+          "preAverage": 3.48,
+          "postAverage": 4.65,
+          "growth": 0.8
+        },
+        {
+          "label": "\uc778\uacf5\uc9c0\ub2a5 \ud65c\uc6a9",
+          "pre": 5,
+          "post": 5,
+          "preAverage": 3.47,
+          "postAverage": 4.6,
+          "growth": 0
+        }
+      ]
+    },
+    {
+      "traineeId": "0014",
+      "courseId": "pilot-2025",
+      "name": "\ud669\ub828",
+      "organization": "\uc5910\ucd08",
+      "trackLabel": "2025 \ud30c\uc77c\ub7ff \uacb0\uacfc \ud1b5\uc9c0",
+      "preOverall": 3,
+      "postOverall": 4,
+      "growth": 1,
+      "cohortGapPost": -0.63,
+      "competencies": [
+        {
+          "label": "\ucef4\ud4e8\ud305\uc0ac\uace0\ub825",
+          "pre": 3,
+          "post": 3.8,
+          "preAverage": 3.48,
+          "postAverage": 4.65,
+          "growth": 0.8
+        },
+        {
+          "label": "\uc778\uacf5\uc9c0\ub2a5 \ud65c\uc6a9",
+          "pre": 3,
+          "post": 4.2,
+          "preAverage": 3.47,
+          "postAverage": 4.6,
+          "growth": 1.2
+        }
+      ]
+    },
+    {
+      "traineeId": "0015",
+      "courseId": "pilot-2025",
+      "name": "\uc774\ud604",
+      "organization": "\ub3550\uc911",
+      "trackLabel": "2025 \ud30c\uc77c\ub7ff \uacb0\uacfc \ud1b5\uc9c0",
+      "preOverall": 3.4,
+      "postOverall": 5,
+      "growth": 1.6,
+      "cohortGapPost": 0.37,
+      "competencies": [
+        {
+          "label": "\ucef4\ud4e8\ud305\uc0ac\uace0\ub825",
+          "pre": 3,
+          "post": 5,
+          "preAverage": 3.48,
+          "postAverage": 4.65,
+          "growth": 2
+        },
+        {
+          "label": "\uc778\uacf5\uc9c0\ub2a5 \ud65c\uc6a9",
+          "pre": 3.8,
+          "post": 5,
+          "preAverage": 3.47,
+          "postAverage": 4.6,
+          "growth": 1.2
+        }
+      ]
+    },
+    {
+      "traineeId": "0016",
+      "courseId": "pilot-2025",
+      "name": "\uae40\ud61c",
+      "organization": "\uc6d00\ucd08",
+      "trackLabel": "2025 \ud30c\uc77c\ub7ff \uacb0\uacfc \ud1b5\uc9c0",
+      "preOverall": 3.9,
+      "postOverall": 4,
+      "growth": 0.1,
+      "cohortGapPost": -0.63,
+      "competencies": [
+        {
+          "label": "\ucef4\ud4e8\ud305\uc0ac\uace0\ub825",
+          "pre": 3.6,
+          "post": 4.8,
+          "preAverage": 3.48,
+          "postAverage": 4.65,
+          "growth": 1.2
+        },
+        {
+          "label": "\uc778\uacf5\uc9c0\ub2a5 \ud65c\uc6a9",
+          "pre": 4.2,
+          "post": 3.2,
+          "preAverage": 3.47,
+          "postAverage": 4.6,
+          "growth": -1
+        }
+      ]
+    },
+    {
+      "traineeId": "0017",
+      "courseId": "pilot-2025",
+      "name": "\ubc15\ud601",
+      "organization": "\uad110\ucd08",
+      "trackLabel": "2025 \ud30c\uc77c\ub7ff \uacb0\uacfc \ud1b5\uc9c0",
+      "preOverall": 4,
+      "postOverall": 4.5,
+      "growth": 0.5,
+      "cohortGapPost": -0.13,
+      "competencies": [
+        {
+          "label": "\ucef4\ud4e8\ud305\uc0ac\uace0\ub825",
+          "pre": 4,
+          "post": 4.2,
+          "preAverage": 3.48,
+          "postAverage": 4.65,
+          "growth": 0.2
+        },
+        {
+          "label": "\uc778\uacf5\uc9c0\ub2a5 \ud65c\uc6a9",
+          "pre": 4,
+          "post": 4.8,
+          "preAverage": 3.47,
+          "postAverage": 4.6,
+          "growth": 0.8
+        }
+      ]
+    },
+    {
+      "traineeId": "0018",
+      "courseId": "pilot-2025",
+      "name": "\ucd5c\uc544",
+      "organization": "\ub3d90\uc911",
+      "trackLabel": "2025 \ud30c\uc77c\ub7ff \uacb0\uacfc \ud1b5\uc9c0",
+      "preOverall": 4.5,
+      "postOverall": 4.8,
+      "growth": 0.3,
+      "cohortGapPost": 0.17,
+      "competencies": [
+        {
+          "label": "\ucef4\ud4e8\ud305\uc0ac\uace0\ub825",
+          "pre": 4.6,
+          "post": 4.8,
+          "preAverage": 3.48,
+          "postAverage": 4.65,
+          "growth": 0.2
+        },
+        {
+          "label": "\uc778\uacf5\uc9c0\ub2a5 \ud65c\uc6a9",
+          "pre": 4.4,
+          "post": 4.8,
+          "preAverage": 3.47,
+          "postAverage": 4.6,
+          "growth": 0.4
+        }
+      ]
+    },
+    {
+      "traineeId": "0019",
+      "courseId": "pilot-2025",
+      "name": "\ud669\ucc2c",
+      "organization": "\ud0dc0\ucd08",
+      "trackLabel": "2025 \ud30c\uc77c\ub7ff \uacb0\uacfc \ud1b5\uc9c0",
+      "preOverall": 4.8,
+      "postOverall": 4.7,
+      "growth": -0.1,
+      "cohortGapPost": 0.07,
+      "competencies": [
+        {
+          "label": "\ucef4\ud4e8\ud305\uc0ac\uace0\ub825",
+          "pre": 4.8,
+          "post": 4.4,
+          "preAverage": 3.48,
+          "postAverage": 4.65,
+          "growth": -0.4
+        },
+        {
+          "label": "\uc778\uacf5\uc9c0\ub2a5 \ud65c\uc6a9",
+          "pre": 4.8,
+          "post": 5,
+          "preAverage": 3.47,
+          "postAverage": 4.6,
+          "growth": 0.2
+        }
+      ]
+    },
+    {
+      "traineeId": "0020",
+      "courseId": "pilot-2025",
+      "name": "\uae40\uc9c4",
+      "organization": "\uace00\uc911",
+      "trackLabel": "2025 \ud30c\uc77c\ub7ff \uacb0\uacfc \ud1b5\uc9c0",
+      "preOverall": 1.5,
+      "postOverall": 4.9,
+      "growth": 3.4,
+      "cohortGapPost": 0.27,
+      "competencies": [
+        {
+          "label": "\ucef4\ud4e8\ud305\uc0ac\uace0\ub825",
+          "pre": 1.8,
+          "post": 4.8,
+          "preAverage": 3.48,
+          "postAverage": 4.65,
+          "growth": 3
+        },
+        {
+          "label": "\uc778\uacf5\uc9c0\ub2a5 \ud65c\uc6a9",
+          "pre": 1.2,
+          "post": 5,
+          "preAverage": 3.47,
+          "postAverage": 4.6,
+          "growth": 3.8
+        }
+      ]
+    },
+    {
+      "traineeId": "0021",
+      "courseId": "pilot-2025",
+      "name": "\uc9c4\uc790",
+      "organization": "\ud3c90\uace0",
+      "trackLabel": "2025 \ud30c\uc77c\ub7ff \uacb0\uacfc \ud1b5\uc9c0",
+      "preOverall": 3.1,
+      "postOverall": 5,
+      "growth": 1.9,
+      "cohortGapPost": 0.37,
+      "competencies": [
+        {
+          "label": "\ucef4\ud4e8\ud305\uc0ac\uace0\ub825",
+          "pre": 3.2,
+          "post": 5,
+          "preAverage": 3.48,
+          "postAverage": 4.65,
+          "growth": 1.8
+        },
+        {
+          "label": "\uc778\uacf5\uc9c0\ub2a5 \ud65c\uc6a9",
+          "pre": 3,
+          "post": 5,
+          "preAverage": 3.47,
+          "postAverage": 4.6,
+          "growth": 2
+        }
+      ]
+    },
+    {
+      "traineeId": "0022",
+      "courseId": "pilot-2025",
+      "name": "\uae40\uacbd",
+      "organization": "\ubd800\ucd08",
+      "trackLabel": "2025 \ud30c\uc77c\ub7ff \uacb0\uacfc \ud1b5\uc9c0",
+      "preOverall": 3,
+      "postOverall": 5,
+      "growth": 2,
+      "cohortGapPost": 0.37,
+      "competencies": [
+        {
+          "label": "\ucef4\ud4e8\ud305\uc0ac\uace0\ub825",
+          "pre": 3.4,
+          "post": 5,
+          "preAverage": 3.48,
+          "postAverage": 4.65,
+          "growth": 1.6
+        },
+        {
+          "label": "\uc778\uacf5\uc9c0\ub2a5 \ud65c\uc6a9",
+          "pre": 2.6,
+          "post": 5,
+          "preAverage": 3.47,
+          "postAverage": 4.6,
+          "growth": 2.4
+        }
+      ]
+    },
+    {
+      "traineeId": "0023",
+      "courseId": "pilot-2025",
+      "name": "\uc1a1\uc815",
+      "organization": "\ucda90\uc911",
+      "trackLabel": "2025 \ud30c\uc77c\ub7ff \uacb0\uacfc \ud1b5\uc9c0",
+      "preOverall": 3.4,
+      "postOverall": 4.6,
+      "growth": 1.2,
+      "cohortGapPost": -0.03,
+      "competencies": [
+        {
+          "label": "\ucef4\ud4e8\ud305\uc0ac\uace0\ub825",
+          "pre": 3.4,
+          "post": 4.2,
+          "preAverage": 3.48,
+          "postAverage": 4.65,
+          "growth": 0.8
+        },
+        {
+          "label": "\uc778\uacf5\uc9c0\ub2a5 \ud65c\uc6a9",
+          "pre": 3.4,
+          "post": 5,
+          "preAverage": 3.47,
+          "postAverage": 4.6,
+          "growth": 1.6
+        }
+      ]
+    },
+    {
+      "traineeId": "0024",
+      "courseId": "pilot-2025",
+      "name": "\uae40\uc9c4",
+      "organization": "\uc9c00\ucd08",
+      "trackLabel": "2025 \ud30c\uc77c\ub7ff \uacb0\uacfc \ud1b5\uc9c0",
+      "preOverall": 4.7,
+      "postOverall": 5,
+      "growth": 0.3,
+      "cohortGapPost": 0.37,
+      "competencies": [
+        {
+          "label": "\ucef4\ud4e8\ud305\uc0ac\uace0\ub825",
+          "pre": 4.8,
+          "post": 5,
+          "preAverage": 3.48,
+          "postAverage": 4.65,
+          "growth": 0.2
+        },
+        {
+          "label": "\uc778\uacf5\uc9c0\ub2a5 \ud65c\uc6a9",
+          "pre": 4.6,
+          "post": 5,
+          "preAverage": 3.47,
+          "postAverage": 4.6,
+          "growth": 0.4
+        }
+      ]
+    },
+    {
+      "traineeId": "0025",
+      "courseId": "pilot-2025",
+      "name": "\uc784\uacbd",
+      "organization": "\uccad0\uc911",
+      "trackLabel": "2025 \ud30c\uc77c\ub7ff \uacb0\uacfc \ud1b5\uc9c0",
+      "preOverall": 3.9,
+      "postOverall": 4,
+      "growth": 0.1,
+      "cohortGapPost": -0.63,
+      "competencies": [
+        {
+          "label": "\ucef4\ud4e8\ud305\uc0ac\uace0\ub825",
+          "pre": 3.6,
+          "post": 4,
+          "preAverage": 3.48,
+          "postAverage": 4.65,
+          "growth": 0.4
+        },
+        {
+          "label": "\uc778\uacf5\uc9c0\ub2a5 \ud65c\uc6a9",
+          "pre": 4.2,
+          "post": 4,
+          "preAverage": 3.47,
+          "postAverage": 4.6,
+          "growth": -0.2
+        }
+      ]
+    },
+    {
+      "traineeId": "0026",
+      "courseId": "pilot-2025",
+      "name": "\uc870\uc218",
+      "organization": "\uac800\ucd08",
+      "trackLabel": "2025 \ud30c\uc77c\ub7ff \uacb0\uacfc \ud1b5\uc9c0",
+      "preOverall": 3,
+      "postOverall": 5,
+      "growth": 2,
+      "cohortGapPost": 0.37,
+      "competencies": [
+        {
+          "label": "\ucef4\ud4e8\ud305\uc0ac\uace0\ub825",
+          "pre": 3.2,
+          "post": 5,
+          "preAverage": 3.48,
+          "postAverage": 4.65,
+          "growth": 1.8
+        },
+        {
+          "label": "\uc778\uacf5\uc9c0\ub2a5 \ud65c\uc6a9",
+          "pre": 2.8,
+          "post": 5,
+          "preAverage": 3.47,
+          "postAverage": 4.6,
+          "growth": 2.2
+        }
+      ]
+    },
+    {
+      "traineeId": "0027",
+      "courseId": "pilot-2025",
+      "name": "\uc870\uacbd",
+      "organization": "\ud6a80\ucd08",
+      "trackLabel": "2025 \ud30c\uc77c\ub7ff \uacb0\uacfc \ud1b5\uc9c0",
+      "preOverall": 3.6,
+      "postOverall": 5,
+      "growth": 1.4,
+      "cohortGapPost": 0.37,
+      "competencies": [
+        {
+          "label": "\ucef4\ud4e8\ud305\uc0ac\uace0\ub825",
+          "pre": 3.2,
+          "post": 5,
+          "preAverage": 3.48,
+          "postAverage": 4.65,
+          "growth": 1.8
+        },
+        {
+          "label": "\uc778\uacf5\uc9c0\ub2a5 \ud65c\uc6a9",
+          "pre": 4,
+          "post": 5,
+          "preAverage": 3.47,
+          "postAverage": 4.6,
+          "growth": 1
+        }
+      ]
+    },
+    {
+      "traineeId": "0028",
+      "courseId": "pilot-2025",
+      "name": "\uae30\ud604",
+      "organization": "\uc6d00\ucd08",
+      "trackLabel": "2025 \ud30c\uc77c\ub7ff \uacb0\uacfc \ud1b5\uc9c0",
+      "preOverall": 3.7,
+      "postOverall": 5,
+      "growth": 1.3,
+      "cohortGapPost": 0.37,
+      "competencies": [
+        {
+          "label": "\ucef4\ud4e8\ud305\uc0ac\uace0\ub825",
+          "pre": 4.2,
+          "post": 5,
+          "preAverage": 3.48,
+          "postAverage": 4.65,
+          "growth": 0.8
+        },
+        {
+          "label": "\uc778\uacf5\uc9c0\ub2a5 \ud65c\uc6a9",
+          "pre": 3.2,
+          "post": 5,
+          "preAverage": 3.47,
+          "postAverage": 4.6,
+          "growth": 1.8
+        }
+      ]
+    },
+    {
+      "traineeId": "0029",
+      "courseId": "pilot-2025",
+      "name": "\uc774\uc6d0",
+      "organization": "\ub0c90\ucd08",
+      "trackLabel": "2025 \ud30c\uc77c\ub7ff \uacb0\uacfc \ud1b5\uc9c0",
+      "preOverall": 3.1,
+      "postOverall": 4.3,
+      "growth": 1.2,
+      "cohortGapPost": -0.33,
+      "competencies": [
+        {
+          "label": "\ucef4\ud4e8\ud305\uc0ac\uace0\ub825",
+          "pre": 3.2,
+          "post": 4.6,
+          "preAverage": 3.48,
+          "postAverage": 4.65,
+          "growth": 1.4
+        },
+        {
+          "label": "\uc778\uacf5\uc9c0\ub2a5 \ud65c\uc6a9",
+          "pre": 3,
+          "post": 4,
+          "preAverage": 3.47,
+          "postAverage": 4.6,
+          "growth": 1
+        }
+      ]
+    },
+    {
+      "traineeId": "0030",
+      "courseId": "pilot-2025",
+      "name": "\uae40\uc9c4",
+      "organization": "\ub3550\uc911",
+      "trackLabel": "2025 \ud30c\uc77c\ub7ff \uacb0\uacfc \ud1b5\uc9c0",
+      "preOverall": 3.5,
+      "postOverall": 3.3,
+      "growth": -0.2,
+      "cohortGapPost": -1.33,
+      "competencies": [
+        {
+          "label": "\ucef4\ud4e8\ud305\uc0ac\uace0\ub825",
+          "pre": 3.6,
+          "post": 3.4,
+          "preAverage": 3.48,
+          "postAverage": 4.65,
+          "growth": -0.2
+        },
+        {
+          "label": "\uc778\uacf5\uc9c0\ub2a5 \ud65c\uc6a9",
+          "pre": 3.4,
+          "post": 3.2,
+          "preAverage": 3.47,
+          "postAverage": 4.6,
+          "growth": -0.2
+        }
+      ]
+    },
+    {
+      "traineeId": "0031",
+      "courseId": "pilot-2025",
+      "name": "\uc774\uc9c4",
+      "organization": "\uae4000\ucd08",
+      "trackLabel": "2025 \ud30c\uc77c\ub7ff \uacb0\uacfc \ud1b5\uc9c0",
+      "preOverall": 2.4,
+      "postOverall": 3.8,
+      "growth": 1.4,
+      "cohortGapPost": -0.83,
+      "competencies": [
+        {
+          "label": "\ucef4\ud4e8\ud305\uc0ac\uace0\ub825",
+          "pre": 2.4,
+          "post": 4,
+          "preAverage": 3.48,
+          "postAverage": 4.65,
+          "growth": 1.6
+        },
+        {
+          "label": "\uc778\uacf5\uc9c0\ub2a5 \ud65c\uc6a9",
+          "pre": 2.4,
+          "post": 3.6,
+          "preAverage": 3.47,
+          "postAverage": 4.6,
+          "growth": 1.2
+        }
+      ]
+    },
+    {
+      "traineeId": "0032",
+      "courseId": "pilot-2025",
+      "name": "\uac15\uc8fc",
+      "organization": "\uc5910\uc911",
+      "trackLabel": "2025 \ud30c\uc77c\ub7ff \uacb0\uacfc \ud1b5\uc9c0",
+      "preOverall": 3.5,
+      "postOverall": 5,
+      "growth": 1.5,
+      "cohortGapPost": 0.37,
+      "competencies": [
+        {
+          "label": "\ucef4\ud4e8\ud305\uc0ac\uace0\ub825",
+          "pre": 3.4,
+          "post": 5,
+          "preAverage": 3.48,
+          "postAverage": 4.65,
+          "growth": 1.6
+        },
+        {
+          "label": "\uc778\uacf5\uc9c0\ub2a5 \ud65c\uc6a9",
+          "pre": 3.6,
+          "post": 5,
+          "preAverage": 3.47,
+          "postAverage": 4.6,
+          "growth": 1.4
+        }
+      ]
+    },
+    {
+      "traineeId": "0033",
+      "courseId": "pilot-2025",
+      "name": "\uae40\uc5f0",
+      "organization": "\ud1b50\ucd08",
+      "trackLabel": "2025 \ud30c\uc77c\ub7ff \uacb0\uacfc \ud1b5\uc9c0",
+      "preOverall": 3.1,
+      "postOverall": 5,
+      "growth": 1.9,
+      "cohortGapPost": 0.37,
+      "competencies": [
+        {
+          "label": "\ucef4\ud4e8\ud305\uc0ac\uace0\ub825",
+          "pre": 3.2,
+          "post": 5,
+          "preAverage": 3.48,
+          "postAverage": 4.65,
+          "growth": 1.8
+        },
+        {
+          "label": "\uc778\uacf5\uc9c0\ub2a5 \ud65c\uc6a9",
+          "pre": 3,
+          "post": 5,
+          "preAverage": 3.47,
+          "postAverage": 4.6,
+          "growth": 2
+        }
+      ]
+    },
+    {
+      "traineeId": "0034",
+      "courseId": "pilot-2025",
+      "name": "\uc8fc\ub828",
+      "organization": "\uc9c00\uc911",
+      "trackLabel": "2025 \ud30c\uc77c\ub7ff \uacb0\uacfc \ud1b5\uc9c0",
+      "preOverall": 3.2,
+      "postOverall": 3.8,
+      "growth": 0.6,
+      "cohortGapPost": -0.83,
+      "competencies": [
+        {
+          "label": "\ucef4\ud4e8\ud305\uc0ac\uace0\ub825",
+          "pre": 3.4,
+          "post": 4,
+          "preAverage": 3.48,
+          "postAverage": 4.65,
+          "growth": 0.6
+        },
+        {
+          "label": "\uc778\uacf5\uc9c0\ub2a5 \ud65c\uc6a9",
+          "pre": 3,
+          "post": 3.6,
+          "preAverage": 3.47,
+          "postAverage": 4.6,
+          "growth": 0.6
+        }
+      ]
+    },
+    {
+      "traineeId": "0035",
+      "courseId": "pilot-2025",
+      "name": "\ubb38\uc900",
+      "organization": "\uae400\uace0",
+      "trackLabel": "2025 \ud30c\uc77c\ub7ff \uacb0\uacfc \ud1b5\uc9c0",
+      "preOverall": 4.2,
+      "postOverall": 4.3,
+      "growth": 0.1,
+      "cohortGapPost": -0.33,
+      "competencies": [
+        {
+          "label": "\ucef4\ud4e8\ud305\uc0ac\uace0\ub825",
+          "pre": 4.2,
+          "post": 4.2,
+          "preAverage": 3.48,
+          "postAverage": 4.65,
+          "growth": 0
+        },
+        {
+          "label": "\uc778\uacf5\uc9c0\ub2a5 \ud65c\uc6a9",
+          "pre": 4.2,
+          "post": 4.4,
+          "preAverage": 3.47,
+          "postAverage": 4.6,
+          "growth": 0.2
+        }
+      ]
+    },
+    {
+      "traineeId": "0036",
+      "courseId": "pilot-2025",
+      "name": "\ubc18\ub3d9",
+      "organization": "\uccad0\uace0",
+      "trackLabel": "2025 \ud30c\uc77c\ub7ff \uacb0\uacfc \ud1b5\uc9c0",
+      "preOverall": 3.4,
+      "postOverall": 5,
+      "growth": 1.6,
+      "cohortGapPost": 0.37,
+      "competencies": [
+        {
+          "label": "\ucef4\ud4e8\ud305\uc0ac\uace0\ub825",
+          "pre": 3.6,
+          "post": 5,
+          "preAverage": 3.48,
+          "postAverage": 4.65,
+          "growth": 1.4
+        },
+        {
+          "label": "\uc778\uacf5\uc9c0\ub2a5 \ud65c\uc6a9",
+          "pre": 3.2,
+          "post": 5,
+          "preAverage": 3.47,
+          "postAverage": 4.6,
+          "growth": 1.8
+        }
+      ]
+    },
+    {
+      "traineeId": "0037",
+      "courseId": "pilot-2025",
+      "name": "\ubc15\ud604",
+      "organization": "\uc7a50\ucd08",
+      "trackLabel": "2025 \ud30c\uc77c\ub7ff \uacb0\uacfc \ud1b5\uc9c0",
+      "preOverall": 3.9,
+      "postOverall": 5,
+      "growth": 1.1,
+      "cohortGapPost": 0.37,
+      "competencies": [
+        {
+          "label": "\ucef4\ud4e8\ud305\uc0ac\uace0\ub825",
+          "pre": 3.8,
+          "post": 5,
+          "preAverage": 3.48,
+          "postAverage": 4.65,
+          "growth": 1.2
+        },
+        {
+          "label": "\uc778\uacf5\uc9c0\ub2a5 \ud65c\uc6a9",
+          "pre": 4,
+          "post": 5,
+          "preAverage": 3.47,
+          "postAverage": 4.6,
+          "growth": 1
+        }
+      ]
+    },
+    {
+      "traineeId": "0038",
+      "courseId": "pilot-2025",
+      "name": "\ubc30\uc6a9",
+      "organization": "\uc1310\uace0",
+      "trackLabel": "2025 \ud30c\uc77c\ub7ff \uacb0\uacfc \ud1b5\uc9c0",
+      "preOverall": 0,
+      "postOverall": 5,
+      "growth": 5,
+      "cohortGapPost": 0.37,
+      "competencies": [
+        {
+          "label": "\ucef4\ud4e8\ud305\uc0ac\uace0\ub825",
+          "pre": 0,
+          "post": 5,
+          "preAverage": 3.48,
+          "postAverage": 4.65,
+          "growth": 5
+        },
+        {
+          "label": "\uc778\uacf5\uc9c0\ub2a5 \ud65c\uc6a9",
+          "pre": 0,
+          "post": 5,
+          "preAverage": 3.47,
+          "postAverage": 4.6,
+          "growth": 5
+        }
+      ]
+    },
+    {
+      "traineeId": "0039",
+      "courseId": "pilot-2025",
+      "name": "\uae40\ud6c8",
+      "organization": "\uc9c00\ucd08",
+      "trackLabel": "2025 \ud30c\uc77c\ub7ff \uacb0\uacfc \ud1b5\uc9c0",
+      "preOverall": 4.7,
+      "postOverall": 5,
+      "growth": 0.3,
+      "cohortGapPost": 0.37,
+      "competencies": [
+        {
+          "label": "\ucef4\ud4e8\ud305\uc0ac\uace0\ub825",
+          "pre": 5,
+          "post": 5,
+          "preAverage": 3.48,
+          "postAverage": 4.65,
+          "growth": 0
+        },
+        {
+          "label": "\uc778\uacf5\uc9c0\ub2a5 \ud65c\uc6a9",
+          "pre": 4.4,
+          "post": 5,
+          "preAverage": 3.47,
+          "postAverage": 4.6,
+          "growth": 0.6
+        }
+      ]
+    },
+    {
+      "traineeId": "0040",
+      "courseId": "pilot-2025",
+      "name": "\uc774\uc601",
+      "organization": "\uc7580\ucd08",
+      "trackLabel": "2025 \ud30c\uc77c\ub7ff \uacb0\uacfc \ud1b5\uc9c0",
+      "preOverall": 4.8,
+      "postOverall": 4.8,
+      "growth": 0,
+      "cohortGapPost": 0.17,
+      "competencies": [
+        {
+          "label": "\ucef4\ud4e8\ud305\uc0ac\uace0\ub825",
+          "pre": 4.6,
+          "post": 4.6,
+          "preAverage": 3.48,
+          "postAverage": 4.65,
+          "growth": 0
+        },
+        {
+          "label": "\uc778\uacf5\uc9c0\ub2a5 \ud65c\uc6a9",
+          "pre": 5,
+          "post": 5,
+          "preAverage": 3.47,
+          "postAverage": 4.6,
+          "growth": 0
+        }
+      ]
+    }
+  ],
+  "summary": {
+    "sourceFileName": "2025 \uc5ed\ub7c9 \ubcc0\ud654 \uacb0\uacfc \ud1b5\uc9c0 (\ud30c\uc77c\ub7ff).xlsx",
+    "sourceLabel": "2025 \ud30c\uc77c\ub7ff \uacb0\uacfc \ud1b5\uc9c0",
+    "importedAt": "2026-03-11T00:00:00.000Z",
+    "participantCount": 40,
+    "preAverage": 3.47,
+    "postAverage": 4.63,
+    "growthAverage": 1.15,
+    "courses": [
+      {
+        "id": "pilot-2025",
+        "label": "2025 \ud30c\uc77c\ub7ff",
+        "participantCount": 40
+      }
+    ]
+  }
+}
